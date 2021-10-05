@@ -13,6 +13,10 @@
   color: var(--basic-black);
   font-family: var(--font-medium);
   text-align: center;
+
+  &:hover {
+    border-color: var(--neon-blue);
+  }
 }
 
 .select {

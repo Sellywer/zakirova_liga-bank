@@ -112,4 +112,8 @@
   font-family: var(--font-medium);
   color: var(--jaguar);
   background-color: var(--ghost--white);
+
+  &:hover {
+    opacity: 0.8;
+  }
 }

@@ -144,6 +144,7 @@ function ConverterForm () {
             className={styles.button}
             type="submit"
             onClick={handleButtonClick}
+            disabled={!+amountFrom || !+amountTo}
           >
             Сохранить результат
           </button>

@@ -1,10 +1,11 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { clearHistory } from '../../store/actions';
 import styles from './history.module.scss';
 import HistoryList from '../history-list/history-list';
 
 function History() {
+  const history = useSelector((data) => data.history);
 
   const dispatch = useDispatch();
 
@@ -22,6 +23,7 @@ function History() {
           className={styles.button}
           type="submit"
           onClick={handleButtonClick}
+          disabled={!history.length}
         >
           Очистить историю
         </button>
