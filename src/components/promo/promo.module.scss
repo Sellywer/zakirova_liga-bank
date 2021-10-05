@@ -1,39 +1,114 @@
 .promo {
-  min-height: 400px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  position: relative;
   display: flex;
   justify-content: center;
-  background-position: center;
-  background-color: #2c36f2;
-  background-image: url('../../assets/img/bg-promo.jpg');
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 400px;
+  background-color: var(--neon-blue);
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 150px;
+    height: 400px;
+    content: "";
+    background-image: linear-gradient(
+      180.24deg,
+      var(--neon-blue-light) 36.31%,
+      var(--persianblue) 99.79%
+    );
+  }
+
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 298px;
+    height: 400px;
+    content: "";
+    background-image: linear-gradient(
+      180.24deg,
+      var(--neon-blue-light) 32.89%,
+      var(--persianblue) 99.79%
+    );
+  }
 }
 
 .wrapper {
-  width: 50%;
-  padding: 105px 0;
+  position: relative;
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 1366px;
+  min-height: 400px;
+  padding: 101px 0 108px 268px;
+
+  &::before {
+    position: absolute;
+    bottom: 0;
+    left: 150px;
+    width: 150px;
+    height: 269px;
+    content: "";
+    background-image: linear-gradient(
+      183.47deg,
+      var(--neon-blue-gradient) 66.3%,
+      #3841ff 97.14%
+    );
+  }
+
+  &::after {
+    position: absolute;
+    right: 298px;
+    bottom: 0;
+    width: 270px;
+    height: 269px;
+    content: "";
+    background-image: linear-gradient(
+      183.47deg,
+      var(--neon-blue-gradient) 27.26%,
+      var(--neon-blue-blue) 97.14%
+    );
+  }
 }
 
 .title {
-  margin: 0 auto;
+  position: relative;
+  margin: 0;
   font-size: 54px;
-  font-weight: 700;
-  padding: 10px 0;
-  color: white;
+  font-family: var(--font-bold);
+  color: var(--ghost--white);
+
+  &::before {
+    position: absolute;
+    top: -40px;
+    left: 430px;
+    z-index: 2;
+    width: 430px;
+    height: 260px;
+    content: "";
+    background-image: url("../../assets/img/credit-cards.png");
+  }
 }
 
 .text {
-  margin: 0 auto 40px;
+  margin-top: 10px;
+  margin-bottom: 35px;
   font-size: 22px;
-  color: white;
-  padding: 15px 0;
-
+  color: var(--quartz);
 }
 
 .button {
+  display: block;
+  min-width: 234px;
+  min-height: 53px;
+  padding: 17px 35px 16px;
   font-size: 18px;
-  font-weight: 400;
-  padding: 19px 36px 21px;
-  background-color: white;
+  font-family: var(--font-medium);
+  color: var(--jaguar);
+  background-color: var(--ghost--white);
 }
